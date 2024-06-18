@@ -1,5 +1,5 @@
 # calculator.py
-
+import numpy as np
 def add(x, y):
     return x + y
 
@@ -17,13 +17,17 @@ def divide(x, y):
     #while b:
         #a,b =b.a%b
     #return a
+
+def matrix_subtraction(A, B):
+    return np.subtract(A, B)
+
 def main():
     print("Select operation:")
     print("1. Add")
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
-   # print("5. gcd")
+    print("5. Matrix Subtraction")
 
     choice = input("Enter choice (1/2/3/4/5): ")
 
@@ -46,8 +50,8 @@ def main():
             except ValueError as e:
                 print(e)
 
-        #elif choice =='5':
-            #print(f'GCD of {num1} and {num2} is{gcd(num1, num2)}')
+        elif choice =='5':
+            print(f'matrix subtraction of {num1} and {num2} is{matrix_subtraction(num1, num2)}')
     else:
         print("Please enter a valid input")
 
